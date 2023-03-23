@@ -10,11 +10,15 @@
 
 html {
   font-size: 62.5%;
+  @media (max-width: 33.8125rem) {
+    font-size: 52.5%;
+  }
 }
 
 body {
   background-color: #eef0f4;
   font-family: var(--ffs);
+  position: relative;
 }
 
 a {
@@ -67,10 +71,12 @@ button {
   outline: none;
   font-family: var(--ffp-2);
   font-size: 1.7rem;
+  cursor: pointer;
 }
 
 .max {
   width: 100%;
   max-width: 1200px;
   margin-inline: auto;
+  padding-inline: 1rem;
 }

@@ -1,8 +1,8 @@
 $breakpoints-up: (
-  "x-large": 75rem,
-  "large": 62.5rem,
-  "small": 48rem,
-  "mobile": 33.875rem,
+  "x-large": 75rem, // 1200
+  "large": 62.5rem, // 1000 
+  "small": 48rem,  // 768 
+  "mobile": 33.875rem, // 432
 );
 
 $breakpoints-down: (

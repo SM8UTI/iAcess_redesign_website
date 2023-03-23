@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const LogoName = "iAcess";
+const LogoName = "iAcess Database";
 
 const MenuLinks = [
   {
@@ -10,7 +10,7 @@ const MenuLinks = [
   },
   {
     text: "Company Search",
-    link: "#",
+    link: "/search",
   },
   {
     text: "Prospects",
@@ -19,13 +19,14 @@ const MenuLinks = [
 ];
 
 const Header = () => {
+  const [active, setActive] = useState(false);
   return (
     <div className="header">
-      <div className="container">
-        <div className="logo">
+      <div className="container max">
+        <Link to={"/"} className="logo">
           <span>{LogoName}</span>
-        </div>
-        <nav>
+        </Link>
+        <nav className={active ? "active" : " "}>
           <ul>
             {MenuLinks.map((elem, index) => (
               <li>
@@ -33,8 +34,21 @@ const Header = () => {
               </li>
             ))}
           </ul>
-          <button>Login</button>
         </nav>
+        <div className="btn-groups">
+          <button className="btn-s">Login</button>
+          <button className="tools-ham">
+            <div
+              className={active ? `hamBurger hamBurger-active` : `hamBurger`}
+              onClick={() => setActive(!active)}
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <span className="text">Tools</span>
+          </button>
+        </div>
       </div>
     </div>
   );

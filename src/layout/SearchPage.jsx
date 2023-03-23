@@ -1,7 +1,12 @@
 import React from "react";
+import Header from "../Components/Header";
 
 const SearchPage = () => {
-  return <div>SearchPage</div>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 };
 
 export default SearchPage;
