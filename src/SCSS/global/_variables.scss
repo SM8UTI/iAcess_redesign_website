@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Poppins:wght@400;500;600;700;800&family=Roboto+Mono:wght@300;400;500;600&display=swap");
+
+:root {
+  // color
+  --bg-white: #fff;
+  --bg-text: #0b0d13;
+  --bg-sub-text: #94a0a4;
+  --bg-gradient: linear-gradient(90deg, #7f35e5 2.21%, #5f0fcc 100%);
+  --bg-primary: #8136e8;
+  --bg-primary-dark: #4f2d68;
+
+  // font
+  --ffp: "Fjalla One", sans-serif;
+  --ffp-2: "Poppins", sans-serif;
+  --ffs: "Roboto Mono", monospace;
+}
