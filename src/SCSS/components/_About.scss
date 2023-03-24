@@ -1,0 +1,110 @@
+@use "../utils/" as *;
+
+.about {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  .container {
+    margin-top: 2rem;
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      //   align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+
+      h2 {
+      }
+      p {
+        max-width: 600px;
+      }
+    }
+  }
+
+  .container-2 {
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0),
+        rgba(0, 0, 0, 0.877)
+      ),
+      url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+
+    height: 100%;
+    min-height: 600px;
+
+    position: relative;
+
+    .text {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      color: var(--bg-white);
+      display: flex;
+      gap: 2rem;
+      flex-direction: column;
+      p {
+        color: var(--bg-white) !important;
+        max-width: 800px;
+        padding-right: 1rem;
+      }
+    }
+  }
+
+  @include breakpoint(small) {
+    .container {
+      .text {
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+.text-heading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--bg-sub-text);
+  position: relative;
+  margin-left: 2.8rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -2.5rem;
+    width: 20px;
+    aspect-ratio: 1;
+    background: var(--bg-gradient);
+    z-index: -1;
+    border-radius: 50%;
+  }
+}
+
+h2 {
+  span {
+    position: relative;
+    background: var(--bg-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &::after {
+      display: inline-block;
+      content: "";
+      background: url(../Assets/Loop.svg) no-repeat 0 0;
+      position: absolute;
+      top: 0rem;
+      left: 1rem;
+      width: 200px;
+      height: 100px;
+      background-size: contain;
+      z-index: -1;
+    }
+  }
+}
