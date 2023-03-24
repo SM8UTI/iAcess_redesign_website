@@ -29,7 +29,7 @@ const Header = () => {
         <nav className={active ? "active" : " "}>
           <ul>
             {MenuLinks.map((elem, index) => (
-              <li>
+              <li key={index}>
                 <Link to={elem.link}>{elem.text}</Link>
               </li>
             ))}
